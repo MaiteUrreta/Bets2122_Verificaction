@@ -1,16 +1,9 @@
 
->configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaé é($"1*˛
-1S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaè	 è(´
-®
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaè	 è(
-%0configuration.ConfigXML"__id*,**
-configuration.ConfigXML"
-theInstance"v
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaè è(
-
-%0configuration.ConfigXMLB"
+*configuration.ConfigXML#getDatabasePort()I
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java5 5("1*ê
+1
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java6	 6("â
+
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java6 6(
+""B
 configuration.ConfigXML

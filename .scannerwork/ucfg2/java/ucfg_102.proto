@@ -1,16 +1,16 @@
 
-@configuration.ConfigXML#getBusinessLogicNode()Ljava/lang/String;S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java’ ’(#"1*ö
-1S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java“	 “(ª
-§
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java“	 “(
-%0java.lang.String"__id*2*0
-configuration.ConfigXML"
-businessLogicNode"o
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java“ “(
+3configuration.ConfigXML#getUser()Ljava/lang/String;
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java9 9("1*î
+1
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java:	 :(É
+Æ
+
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java:	 :(
+%0java.lang.String"__id*%*#
+configuration.ConfigXML"
+user"›
+
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java: :(
 
 %0java.lang.StringB
 configuration.ConfigXML

@@ -1,16 +1,9 @@
 
-@configuration.ConfigXML#getBusinessLogicName()Ljava/lang/String;S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaö ö(#"1*ˆ
-1S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaõ	 õ(™
-ß
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaõ	 õ(
-%0java.lang.String"__id*2*0
-configuration.ConfigXML"
-businessLogicName"o
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaõ õ(
-
-%0java.lang.StringB
+*configuration.ConfigXML#isDatabaseLocal()Z
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.javaA A("1*ê
+1
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.javaB	 B("â
+
+uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.javaB B(
+""B
 configuration.ConfigXML

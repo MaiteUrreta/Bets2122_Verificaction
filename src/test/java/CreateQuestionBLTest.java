@@ -25,7 +25,7 @@ public class CreateQuestionBLTest {
 	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));
 
 	private  BLFacadeImplementation sut= new BLFacadeImplementation(da);
-	private  TestUtilityFacadeImplementation testBL= new TestUtilityFacadeImplementation();
+	private  TestUtilityBL testBL= new TestUtilityBL();
 
 	private Event ev;
 

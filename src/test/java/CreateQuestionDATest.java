@@ -22,7 +22,7 @@ import exceptions.QuestionAlreadyExist;
 public class CreateQuestionDATest {
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
-	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
+	static TestUtilityDA testDA = new TestUtilityDA();
 
 	private Event ev;
 
@@ -114,17 +114,17 @@ public class CreateQuestionDATest {
 			// configure the state of the system (create object in the dabatase)
 			Float betMinimum = 2f;
 			String queryText = "Query Text";
-			try {
+//			try {
 				// invoke System Under Test (sut)
-				Question q = sut.createQuestion(null, queryText, betMinimum);
+				assertThrows(NullPointerException.class, ()-> sut.createQuestion(null, queryText, betMinimum));
 
-				// verify the results returned
-				assertNull(q);
+//				// verify the results returned
+//				assertNull(q);
 
-			} catch (QuestionAlreadyExist e) {
-				// if the program goes to this point fail
-				fail("The event is null. Impossible to search for a question in it");
-			} 
+//			} catch (QuestionAlreadyExist e) {
+//				// if the program goes to this point fail
+//				fail("The event is null. Impossible to search for a question in it");
+//			} 
 	}
 	
 	@Test
@@ -144,29 +144,29 @@ public class CreateQuestionDATest {
 			testDA.close();
 
 			String queryText = null;
-			try {
+//			try {
 				// invoke System Under Test (sut)
-				Question q = sut.createQuestion(ev, queryText, betMinimum);
+				assertThrows(NullPointerException.class, ()-> sut.createQuestion(ev, queryText, betMinimum));
 
-				// verify the results returned
-				assertNull(q);
-				
-				// verify DB
-				Vector<Event> es = testDA.getEvents(oneDate);
-				testDA.close();
+//				// verify the results returned
+//				assertNull(q);
+//				
+//				// verify DB
+//				Vector<Event> es = testDA.getEvents(oneDate);
+//				testDA.close();
+//
+//				assertTrue(es.contains(ev));
 
-				assertTrue(es.contains(ev));
-
-			} catch (QuestionAlreadyExist e) {
-				// if the program goes to this point fail
-				fail("No, the question is null");
-			} finally {
+//			} catch (QuestionAlreadyExist e) {
+//				// if the program goes to this point fail
+//				fail("No, the question is null");
+//			} finally {
 				// Remove the created objects in the database (cascade removing)
 				testDA.open();
 				boolean b = testDA.removeEvent(ev);
 				System.out.println("Finally " + b);
 				testDA.close();
-			}
+//			}
 		} catch (ParseException e) {
 			fail("It should be correct: check the date format");
 		}

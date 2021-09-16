@@ -12,14 +12,14 @@ import domain.Event;
  * @author IS2
  *
  */
-public class TestUtilityFacadeImplementation {
-		private TestUtilityDataAccess dbManagerTest;
+public class TestUtilityBL {
+		private TestUtilityDA dbManagerTest;
  	
     
-	   public TestUtilityFacadeImplementation()  {			
+	   public TestUtilityBL()  {			
 			System.out.println("Creating TestFacadeImplementation instance");
-			ConfigXML c=ConfigXML.getInstance();
-			dbManagerTest=new TestUtilityDataAccess(); 
+			ConfigXML.getInstance();
+			dbManagerTest=new TestUtilityDA(); 
 			dbManagerTest.close();
 		}
 		
