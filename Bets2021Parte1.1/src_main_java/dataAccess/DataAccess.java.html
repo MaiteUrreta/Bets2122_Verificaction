@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>DataAccess.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Bets2021Parte1.1 (16 sept. 2021 8:35:17)</a> &gt; <a href="../../index.html" class="el_group">Bets2021Parte1.1</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">dataAccess</a> &gt; <span class="el_source">DataAccess.java</span></div><h1>DataAccess.java</h1><pre class="source lang-java linenums">package dataAccess;
+
+//hello
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import configuration.ConfigXML;
+import configuration.UtilDate;
+import domain.Event;
+import domain.Question;
+import exceptions.QuestionAlreadyExist;
+
+/**
+ * It implements the data access to the objectDb database
+ */
+public class DataAccess  {
+	protected static EntityManager  db;
+	protected static EntityManagerFactory emf;
+
+
+<span class="pc" id="L32">	ConfigXML c=ConfigXML.getInstance();</span>
+
+<span class="fc" id="L34">     public DataAccess(boolean initializeMode)  {</span>
+		
+<span class="fc" id="L36">		System.out.println(&quot;Creating DataAccess instance =&gt; isDatabaseLocal: &quot;+c.isDatabaseLocal()+&quot; getDatabBaseOpenMode: &quot;+c.getDataBaseOpenMode());</span>
+
+<span class="fc" id="L38">		open(initializeMode);</span>
+		
+<span class="fc" id="L40">	}</span>
+
+<span class="nc" id="L42">	public DataAccess()  {	</span>
+<span class="nc" id="L43">		 new DataAccess(false);</span>
+<span class="nc" id="L44">	}</span>
+	
+	
+	/**
+	 * This is the data access method that initializes the database with some events and questions.
+	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option &quot;initialize&quot; is declared in the tag dataBaseOpenMode of resources/config.xml file
+	 */	
+	public void initializeDB(){
+		
+<span class="nc" id="L53">		db.getTransaction().begin();</span>
+		try {
+
+			
+<span class="nc" id="L57">		   Calendar today = Calendar.getInstance();</span>
+		   
+<span class="nc" id="L59">		   int month=today.get(Calendar.MONTH);</span>
+<span class="nc" id="L60">		   month+=1;</span>
+<span class="nc" id="L61">		   int year=today.get(Calendar.YEAR);</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">		   if (month==12) { month=0; year+=1;}  </span>
+	    
+<span class="nc" id="L64">			Event ev1=new Event(1, &quot;AtlÃ©tico-Athletic&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L65">			Event ev2=new Event(2, &quot;Eibar-Barcelona&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L66">			Event ev3=new Event(3, &quot;Getafe-Celta&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L67">			Event ev4=new Event(4, &quot;AlavÃ©s-Deportivo&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L68">			Event ev5=new Event(5, &quot;EspaÃ±ol-Villareal&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L69">			Event ev6=new Event(6, &quot;Las Palmas-Sevilla&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L70">			Event ev7=new Event(7, &quot;Malaga-Valencia&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L71">			Event ev8=new Event(8, &quot;Girona-LeganÃ©s&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L72">			Event ev9=new Event(9, &quot;Real Sociedad-Levante&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L73">			Event ev10=new Event(10, &quot;Betis-Real Madrid&quot;, UtilDate.newDate(year,month,17));</span>
+
+<span class="nc" id="L75">			Event ev11=new Event(11, &quot;Atletico-Athletic&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L76">			Event ev12=new Event(12, &quot;Eibar-Barcelona&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L77">			Event ev13=new Event(13, &quot;Getafe-Celta&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L78">			Event ev14=new Event(14, &quot;AlavÃ©s-Deportivo&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L79">			Event ev15=new Event(15, &quot;EspaÃ±ol-Villareal&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L80">			Event ev16=new Event(16, &quot;Las Palmas-Sevilla&quot;, UtilDate.newDate(year,month,1));</span>
+			
+
+<span class="nc" id="L83">			Event ev17=new Event(17, &quot;MÃ¡laga-Valencia&quot;, UtilDate.newDate(year,month,28));</span>
+<span class="nc" id="L84">			Event ev18=new Event(18, &quot;Girona-LeganÃ©s&quot;, UtilDate.newDate(year,month,28));</span>
+<span class="nc" id="L85">			Event ev19=new Event(19, &quot;Real Sociedad-Levante&quot;, UtilDate.newDate(year,month,28));</span>
+<span class="nc" id="L86">			Event ev20=new Event(20, &quot;Betis-Real Madrid&quot;, UtilDate.newDate(year,month,28));</span>
+			
+			Question q1;
+			Question q2;
+			Question q3;
+			Question q4;
+			Question q5;
+			Question q6;
+					
+<span class="nc bnc" id="L95" title="All 2 branches missed.">			if (Locale.getDefault().equals(new Locale(&quot;es&quot;))) {</span>
+<span class="nc" id="L96">				q1=ev1.addQuestion(&quot;Â¿QuiÃ©n ganarÃ¡ el partido?&quot;,1);</span>
+<span class="nc" id="L97">				q2=ev1.addQuestion(&quot;Â¿QuiÃ©n meterÃ¡ el primer gol?&quot;,2);</span>
+<span class="nc" id="L98">				q3=ev11.addQuestion(&quot;Â¿QuiÃ©n ganarÃ¡ el partido?&quot;,1);</span>
+<span class="nc" id="L99">				q4=ev11.addQuestion(&quot;Â¿CuÃ¡ntos goles se marcarÃ¡n?&quot;,2);</span>
+<span class="nc" id="L100">				q5=ev17.addQuestion(&quot;Â¿QuiÃ©n ganarÃ¡ el partido?&quot;,1);</span>
+<span class="nc" id="L101">				q6=ev17.addQuestion(&quot;Â¿HabrÃ¡ goles en la primera parte?&quot;,2);</span>
+<span class="nc" id="L102">			}</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">			else if (Locale.getDefault().equals(new Locale(&quot;en&quot;))) {</span>
+<span class="nc" id="L104">				q1=ev1.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L105">				q2=ev1.addQuestion(&quot;Who will score first?&quot;,2);</span>
+<span class="nc" id="L106">				q3=ev11.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L107">				q4=ev11.addQuestion(&quot;How many goals will be scored in the match?&quot;,2);</span>
+<span class="nc" id="L108">				q5=ev17.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L109">				q6=ev17.addQuestion(&quot;Will there be goals in the first half?&quot;,2);</span>
+<span class="nc" id="L110">			}			</span>
+			else {
+<span class="nc" id="L112">				q1=ev1.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L113">				q2=ev1.addQuestion(&quot;Zeinek sartuko du lehenengo gola?&quot;,2);</span>
+<span class="nc" id="L114">				q3=ev11.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L115">				q4=ev11.addQuestion(&quot;Zenbat gol sartuko dira?&quot;,2);</span>
+<span class="nc" id="L116">				q5=ev17.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L117">				q6=ev17.addQuestion(&quot;Golak sartuko dira lehenengo zatian?&quot;,2);</span>
+				
+			}
+			
+			
+<span class="nc" id="L122">			db.persist(q1);</span>
+<span class="nc" id="L123">			db.persist(q2);</span>
+<span class="nc" id="L124">			db.persist(q3);</span>
+<span class="nc" id="L125">			db.persist(q4);</span>
+<span class="nc" id="L126">			db.persist(q5);</span>
+<span class="nc" id="L127">			db.persist(q6);</span>
+	
+	        
+<span class="nc" id="L130">			db.persist(ev1);</span>
+<span class="nc" id="L131">			db.persist(ev2);</span>
+<span class="nc" id="L132">			db.persist(ev3);</span>
+<span class="nc" id="L133">			db.persist(ev4);</span>
+<span class="nc" id="L134">			db.persist(ev5);</span>
+<span class="nc" id="L135">			db.persist(ev6);</span>
+<span class="nc" id="L136">			db.persist(ev7);</span>
+<span class="nc" id="L137">			db.persist(ev8);</span>
+<span class="nc" id="L138">			db.persist(ev9);</span>
+<span class="nc" id="L139">			db.persist(ev10);</span>
+<span class="nc" id="L140">			db.persist(ev11);</span>
+<span class="nc" id="L141">			db.persist(ev12);</span>
+<span class="nc" id="L142">			db.persist(ev13);</span>
+<span class="nc" id="L143">			db.persist(ev14);</span>
+<span class="nc" id="L144">			db.persist(ev15);</span>
+<span class="nc" id="L145">			db.persist(ev16);</span>
+<span class="nc" id="L146">			db.persist(ev17);</span>
+<span class="nc" id="L147">			db.persist(ev18);</span>
+<span class="nc" id="L148">			db.persist(ev19);</span>
+<span class="nc" id="L149">			db.persist(ev20);			</span>
+			
+<span class="nc" id="L151">			db.getTransaction().commit();</span>
+<span class="nc" id="L152">			System.out.println(&quot;Db initialized&quot;);</span>
+<span class="nc" id="L153">		}</span>
+<span class="nc" id="L154">		catch (Exception e){</span>
+<span class="nc" id="L155">			e.printStackTrace();</span>
+		}
+<span class="nc" id="L157">	}</span>
+	
+	/**
+	 * This method creates a question for an event, with a question text and the minimum bet
+	 * 
+	 * @param event to which question is added
+	 * @param question text of the question
+	 * @param betMinimum minimum quantity of the bet
+	 * @return the created question, or null, or an exception
+ 	 * @throws QuestionAlreadyExist if the same question already exists for the event
+	 */
+	public Question createQuestion(Event event, String question, float betMinimum) throws  QuestionAlreadyExist {
+<span class="fc" id="L169">		System.out.println(&quot;&gt;&gt; DataAccess: createQuestion=&gt; event= &quot;+event+&quot; question= &quot;+question+&quot; betMinimum=&quot;+betMinimum);</span>
+		
+<span class="fc" id="L171">			Event ev = db.find(Event.class, event.getEventNumber());</span>
+			
+<span class="fc bfc" id="L173" title="All 2 branches covered.">			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorQueryAlreadyExist&quot;));</span>
+			
+<span class="fc" id="L175">			db.getTransaction().begin();</span>
+<span class="fc" id="L176">			Question q = ev.addQuestion(question, betMinimum);</span>
+			//db.persist(q);
+<span class="fc" id="L178">			db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class</span>
+							// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+<span class="fc" id="L180">			db.getTransaction().commit();</span>
+<span class="fc" id="L181">			return q;</span>
+		
+	}
+	
+	/**
+	 * This method retrieves from the database the events of a given date 
+	 * 
+	 * @param date in which events are retrieved
+	 * @return collection of events
+	 */
+	public Vector&lt;Event&gt; getEvents(Date date) {
+<span class="nc" id="L192">		System.out.println(&quot;&gt;&gt; DataAccess: getEvents&quot;);</span>
+<span class="nc" id="L193">		Vector&lt;Event&gt; res = new Vector&lt;Event&gt;();	</span>
+<span class="nc" id="L194">		TypedQuery&lt;Event&gt; query = db.createQuery(&quot;SELECT ev FROM Event ev WHERE ev.eventDate=?1&quot;,Event.class);   </span>
+<span class="nc" id="L195">		query.setParameter(1, date);</span>
+<span class="nc" id="L196">		List&lt;Event&gt; events = query.getResultList();</span>
+<span class="nc bnc" id="L197" title="All 2 branches missed.">	 	 for (Event ev:events){</span>
+<span class="nc" id="L198">	 	   System.out.println(ev.toString());		 </span>
+<span class="nc" id="L199">		   res.add(ev);</span>
+		  }
+<span class="nc" id="L201">	 	return res;</span>
+	}
+	
+	/**
+	 * This method retrieves from the database the dates a month for which there are events
+	 * 
+	 * @param date of the month for which days with events want to be retrieved 
+	 * @return collection of dates
+	 */
+	public Vector&lt;Date&gt; getEventsMonth(Date date) {
+<span class="nc" id="L211">		System.out.println(&quot;&gt;&gt; DataAccess: getEventsMonth&quot;);</span>
+<span class="nc" id="L212">		Vector&lt;Date&gt; res = new Vector&lt;Date&gt;();	</span>
+		
+<span class="nc" id="L214">		Date firstDayMonthDate= UtilDate.firstDayMonth(date);</span>
+<span class="nc" id="L215">		Date lastDayMonthDate= UtilDate.lastDayMonth(date);</span>
+				
+		
+<span class="nc" id="L218">		TypedQuery&lt;Date&gt; query = db.createQuery(&quot;SELECT DISTINCT ev.eventDate FROM Event ev WHERE ev.eventDate BETWEEN ?1 and ?2&quot;,Date.class);   </span>
+<span class="nc" id="L219">		query.setParameter(1, firstDayMonthDate);</span>
+<span class="nc" id="L220">		query.setParameter(2, lastDayMonthDate);</span>
+<span class="nc" id="L221">		List&lt;Date&gt; dates = query.getResultList();</span>
+<span class="nc bnc" id="L222" title="All 2 branches missed.">	 	 for (Date d:dates){</span>
+<span class="nc" id="L223">	 	   System.out.println(d.toString());		 </span>
+<span class="nc" id="L224">		   res.add(d);</span>
+		  }
+<span class="nc" id="L226">	 	return res;</span>
+	}
+	
+
+public void open(boolean initializeMode){
+		
+<span class="fc" id="L232">		System.out.println(&quot;Opening DataAccess instance =&gt; isDatabaseLocal: &quot;+c.isDatabaseLocal()+&quot; getDatabBaseOpenMode: &quot;+c.getDataBaseOpenMode());</span>
+
+<span class="fc" id="L234">		String fileName=c.getDbFilename();</span>
+<span class="pc bpc" id="L235" title="1 of 2 branches missed.">		if (initializeMode) {</span>
+<span class="nc" id="L236">			fileName=fileName+&quot;;drop&quot;;</span>
+<span class="nc" id="L237">			System.out.println(&quot;Deleting the DataBase&quot;);</span>
+		}
+		
+<span class="pc bpc" id="L240" title="1 of 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
+<span class="fc" id="L241">			  emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot;+fileName);</span>
+<span class="fc" id="L242">			  db = emf.createEntityManager();</span>
+<span class="fc" id="L243">		} else {</span>
+<span class="nc" id="L244">			Map&lt;String, String&gt; properties = new HashMap&lt;String, String&gt;();</span>
+<span class="nc" id="L245">			  properties.put(&quot;javax.persistence.jdbc.user&quot;, c.getUser());</span>
+<span class="nc" id="L246">			  properties.put(&quot;javax.persistence.jdbc.password&quot;, c.getPassword());</span>
+
+<span class="nc" id="L248">			  emf = Persistence.createEntityManagerFactory(&quot;objectdb://&quot;+c.getDatabaseNode()+&quot;:&quot;+c.getDatabasePort()+&quot;/&quot;+fileName, properties);</span>
+
+<span class="nc" id="L250">			  db = emf.createEntityManager();</span>
+    	   }
+		
+<span class="fc" id="L253">	}</span>
+public boolean existQuestion(Event event, String question) {
+<span class="nc" id="L255">	System.out.println(&quot;&gt;&gt; DataAccess: existQuestion=&gt; event= &quot;+event+&quot; question= &quot;+question);</span>
+<span class="nc" id="L256">	Event ev = db.find(Event.class, event.getEventNumber());</span>
+<span class="nc" id="L257">	return ev.DoesQuestionExists(question);</span>
+	
+}
+	public void close(){
+<span class="fc" id="L261">		db.close();</span>
+<span class="fc" id="L262">		System.out.println(&quot;DataBase closed&quot;);</span>
+<span class="fc" id="L263">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span>Bets2021Parte1.1 (16 sept. 2021 8:35:17)</div></body></html>
