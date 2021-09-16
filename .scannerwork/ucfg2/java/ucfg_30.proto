@@ -1,16 +1,16 @@
 
-0domain.Event#getEventNumber()Ljava/lang/Integer;t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java5 5("1*Ë
-1t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6	 6(»
-¸
-t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6	 6(
-%0java.lang.Integer"__id*!*
-domain.Event"
-eventNumber"‘
-t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6 6(
-
-%0java.lang.IntegerB
-domain.Event
+(domain.Question#getEvent()Ldomain/Event;y
+mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.java‹ ‹("1*Í
+1y
+mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.javaŒ	 Œ(¸
+µ
+y
+mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.javaŒ	 Œ(
+%0domain.Event"__id**
+domain.Question"
+event"‘
+y
+mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.javaŒ Œ(
+
+%0domain.EventB
+domain.Question

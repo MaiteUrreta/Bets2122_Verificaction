@@ -1,16 +1,18 @@
 
-6domain.Question#getQuestionNumber()Ljava/lang/Integer;w
-mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.java4 4(!"1*Ú
-1w
-mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.java5	 5(Ä
-Á
-w
-mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.java5	 5(
-%0java.lang.Integer"__id*'*%
-domain.Question"
-questionNumber"”
-w
-mC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Question.java5 5(
-
-%0java.lang.IntegerB
-domain.Question
+Fdomain.IntegerAdapter#unmarshal(Ljava/lang/String;)Ljava/lang/Integer;}
+sC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/IntegerAdapter.java ("1*‚
+1}
+sC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/IntegerAdapter.java (î
+ë
+}
+sC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/IntegerAdapter.java ("	
+%0int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
+java.lang.Integer*
+
+sjava.lang.String"Œ
+}
+sC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/IntegerAdapter.java (#
+	
+%0int:
+sjava.lang.StringB
+domain.IntegerAdapter

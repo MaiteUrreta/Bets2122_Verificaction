@@ -1,33 +1,15 @@
 
-WbusinessLogic.BLFacadeImplementation#getEventsMonth(Ljava/util/Date;)Ljava/util/Vector;ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javae  e(."startingBlock*π
-startingBlockç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javae. e(9Œ
-À
-ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javae e(
-%0"
-__annotate*
-	WebMethod*
-
-datejava.util.Date¡
-æ
-ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javae4 e(8
-datejava.util.Date"__annotation*
-
-%0*
-1*Ç
-1ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javaf f(º
-π
-ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javag g(5
-datesjava.util.Vector"__id*
-"""≠
-ç
-ÇC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/businessLogic/BLFacadeImplementation.javai i(
-
-datesjava.util.Vector:
-datejava.util.DateB(&
-$businessLogic.BLFacadeImplementation
+domain.Event#hashCode()It
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javaq q("1*∑
+1t
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javar r(ª
+∏
+t
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javat t('
+%0java.lang.Integer"__id*!*
+domain.Event"
+eventNumber"~
+t
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javau u(
+""B
+domain.Event

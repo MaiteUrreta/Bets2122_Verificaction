@@ -23,7 +23,7 @@ import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 import utility.TestUtilityFacadeImplementation;
 
-public class CreateQuestionBLTest {
+class CreateQuestionBLTest {
 	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));
 
 	private  BLFacadeImplementation sut= new BLFacadeImplementation(da);
@@ -34,7 +34,7 @@ public class CreateQuestionBLTest {
 
 	@Test
 	// sut.createQuestion: The event has one question with a queryText.
-	public void test1() {
+	void test1() {
 		try {
 			// configure the state of the system (create object in the dabatase)
 			String eventText = "Event Text";
@@ -58,7 +58,7 @@ public class CreateQuestionBLTest {
 
 	@Test
 	// sut.createQuestion: The event has NOT one question with a queryText.
-	public void test2() {
+	void test2() {
 		try {
 			// configure the state of the system (create object in the dabatase)
 			String eventText = "Event Text";

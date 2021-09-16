@@ -1,16 +1,93 @@
 
-3configuration.ConfigXML#getUser()Ljava/lang/String;
-uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java9 9("1*î
-1
-uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java:	 :(É
-Æ
-
-uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java:	 :(
-%0java.lang.String"__id*%*#
-configuration.ConfigXML"
-user"›
-
-uC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/configuration/ConfigXML.java: :(
+,gui.MainGUI#getBoton2()Ljavax/swing/JButton;s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javan n("3*¤
+2s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javap p(%¨¥
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javap p(#
+%1javax.swing.JButton"javax.swing.JButtonº
+·
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javap p(%
+%2"javax.swing.JButton#<init>()V*
+
+%1javax.swing.JButtonÂ
+¿
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javap p(%%
+gui.MainGUI"
+jButtonCreateQuery"__id*
+
+%1javax.swing.JButtonÂ
+¿
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javaq q(
+%3javax.swing.JButton"__id*'*%
+gui.MainGUI"
+jButtonCreateQuery—
+”
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javaq q(C
+%4java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*"
+java.util.ResourceBundle*
+	Etiquetas¬©
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javaq q(\
+%5java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;* 
+
+%4java.util.ResourceBundle*
+CreateQuery2getString(Ljava/lang/String;)‘Ž
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javaq q(]
+
+%6void"7javax.swing.AbstractButton#setText(Ljava/lang/String;)V*
+
+%3javax.swing.JButton*
 
-%0java.lang.StringB
-configuration.ConfigXML
+%5java.lang.String2setText(Ljava/lang/String;)Â
+¿
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javar r(
+%7javax.swing.JButton"__id*'*%
+gui.MainGUI"
+jButtonCreateQueryœ™
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javar, r(I
+%8gui.MainGUI$2"gui.MainGUI$2±
+®
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javar( w(
+%9"java.lang.Object#<init>()V*
+
+%8gui.MainGUI$2½º
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javar w(
+%10void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*
+
+%7javax.swing.JButton*
+
+%8gui.MainGUI$222addActionListener(Ljava/awt/event/ActionListener;)*
+1*Å
+3s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javao o(Â
+¿
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javao o(
+%0javax.swing.JButton"__id*'*%
+gui.MainGUI"
+jButtonCreateQuery*
+2
+1*Ô
+1s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javay	 y(Ã
+À
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javay	 y(
+%11javax.swing.JButton"__id*'*%
+gui.MainGUI"
+jButtonCreateQuery"“
+s
+iC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/gui/MainGUI.javay y(
+
+%11javax.swing.JButtonB
+gui.MainGUI

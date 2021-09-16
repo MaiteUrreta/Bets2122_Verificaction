@@ -22,7 +22,7 @@ import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
 
-public class CreateQuestionBLMockTest {
+class CreateQuestionBLMockTest {
 	DataAccess dataAccess = Mockito.mock(DataAccess.class);
 	Event mockedEvent = Mockito.mock(Event.class);
 
@@ -31,7 +31,7 @@ public class CreateQuestionBLMockTest {
 	@SuppressWarnings("unchecked")
 	@DisplayName("sut.createQuestion: The event has one question with a queryText.")
 	@Test
-	public void test1() {
+	void test1() {
 		try {
 			// define paramaters
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -64,7 +64,7 @@ public class CreateQuestionBLMockTest {
 
 	@Test
 	@DisplayName("sut.createQuestion: The event has NOT a question with a queryText.")
-	public void test2() {
+	void test2() {
 		try {
 			// define paramaters
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -105,7 +105,7 @@ public class CreateQuestionBLMockTest {
 
 	@Test
 	@DisplayName(" sut.createQuestion: The event is null.")
-	public void test3() {
+	void test3() {
 
 		try {
 			// define paramaters

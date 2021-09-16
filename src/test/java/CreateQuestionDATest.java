@@ -20,7 +20,7 @@ import domain.Question;
 import exceptions.QuestionAlreadyExist;
 import utility.TestUtilityDataAccess;
 
-public class CreateQuestionDATest {
+class CreateQuestionDATest {
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
@@ -29,7 +29,7 @@ public class CreateQuestionDATest {
 
 	@Test
 	// sut.createQuestion: The event has one question with a queryText.
-	public void test1() {
+	void test1() {
 
 		try {
 			// configure the state of the system (create object in the dabatase)
@@ -60,7 +60,7 @@ public class CreateQuestionDATest {
 
 	@Test
 	// sut.createQuestion: The event has NOT one question with a queryText.
-	public void test2() {
+	void test2() {
 		try {
 
 			// configure the state of the system (create object in the dabatase)
@@ -110,27 +110,27 @@ public class CreateQuestionDATest {
 	
 	@Test
 	// sut.createQuestion: The event is null.
-	public void test3() {
+	void test3() {
 
 			// configure the state of the system (create object in the dabatase)
 			Float betMinimum = 2f;
 			String queryText = "Query Text";
-//			try {
+			try {
 				// invoke System Under Test (sut)
-				assertThrows(NullPointerException.class, ()-> sut.createQuestion(null, queryText, betMinimum));
+				Question q= sut.createQuestion(null, queryText, betMinimum);
 
-//				// verify the results returned
-//				assertNull(q);
+				// verify the results returned
+				assertNull(q);
 
-//			} catch (QuestionAlreadyExist e) {
-//				// if the program goes to this point fail
-//				fail("The event is null. Impossible to search for a question in it");
-//			} 
+			} catch (QuestionAlreadyExist e) {
+				// if the program goes to this point fail
+				fail("The event is null. Impossible to search for a question in it");
+			} 
 	}
 	
 	@Test
 	// sut.createQuestion: The queryText is null.
-	public void test4() {
+	void test4() {
 		try {
 
 			// configure the state of the system (create object in the dabatase)
@@ -145,29 +145,29 @@ public class CreateQuestionDATest {
 			testDA.close();
 
 			String queryText = null;
-//			try {
+			try {
 				// invoke System Under Test (sut)
-				assertThrows(NullPointerException.class, ()-> sut.createQuestion(ev, queryText, betMinimum));
+				Question q= sut.createQuestion(ev, queryText, betMinimum);
 
-//				// verify the results returned
-//				assertNull(q);
-//				
-//				// verify DB
-//				Vector<Event> es = testDA.getEvents(oneDate);
-//				testDA.close();
-//
-//				assertTrue(es.contains(ev));
+				// verify the results returned
+				assertNull(q);
+				
+				// verify DB
+				Vector<Event> es = testDA.getEvents(oneDate);
+				testDA.close();
 
-//			} catch (QuestionAlreadyExist e) {
-//				// if the program goes to this point fail
-//				fail("No, the question is null");
-//			} finally {
+				assertTrue(es.contains(ev));
+
+			} catch (QuestionAlreadyExist e) {
+				// if the program goes to this point fail
+				fail("No, the question is null");
+			} finally {
 				// Remove the created objects in the database (cascade removing)
 				testDA.open();
 				boolean b = testDA.removeEvent(ev);
 				System.out.println("Finally " + b);
 				testDA.close();
-//			}
+			}
 		} catch (ParseException e) {
 			fail("It should be correct: check the date format");
 		}
@@ -176,7 +176,7 @@ public class CreateQuestionDATest {
 	
 	@Test
 	// sut.createQuestion: The betMinimum is negative.
-	public void test5() {
+	void test5() {
 		try {
 
 			// configure the state of the system (create object in the dabatase)

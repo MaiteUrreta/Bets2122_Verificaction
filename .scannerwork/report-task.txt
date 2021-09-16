@@ -1,7 +1,7 @@
 organization=maiteurreta
-projectKey=Bets2122Verificaction
+projectKey=Bets2122Verification
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.23273
-dashboardUrl=https://sonarcloud.io/dashboard?id=Bets2122Verificaction
-ceTaskId=AXvtpsgOXKQaEJ20Dfh5
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXvtpsgOXKQaEJ20Dfh5
+dashboardUrl=https://sonarcloud.io/dashboard?id=Bets2122Verification
+ceTaskId=AXvuS_A4NW2YGd2zmOzU
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXvuS_A4NW2YGd2zmOzU

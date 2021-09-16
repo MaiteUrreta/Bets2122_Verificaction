@@ -1,15 +1,16 @@
 
-domain.Event#hashCode()It
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javaq q("1*·
+0domain.Event#getEventNumber()Ljava/lang/Integer;t
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java5 5("1*Ë
 1t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javar r(»
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6	 6(»
 ¸
 t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javat t('
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6	 6(
 %0java.lang.Integer"__id*!*
 domain.Event"
-eventNumber"~
+eventNumber"‘
 t
-jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.javau u(
-""B
+jC:/Users/jipurlom/ownCloud/IS2/Curso_2122/PROYECTO-PARTE1/Bets2021Parte1.1/src/main/java/domain/Event.java6 6(
+
+%0java.lang.IntegerB
 domain.Event
