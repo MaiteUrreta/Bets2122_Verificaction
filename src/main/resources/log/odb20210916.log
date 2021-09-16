@@ -1,0 +1,120 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:27:03 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 8344@U110603
+
+[2021-09-16 08:27:03 #2 type.registry] 
+New type domain.Question
+
+[2021-09-16 08:27:03 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:27:03 #4 type.registry] 
+New type domain.Event
+
+[2021-09-16 08:27:03 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-16 08:27:03 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-16 08:27:03 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:31:33 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 23316@U110603
+
+[2021-09-16 08:31:34 #2 type.registry] 
+New type domain.Question
+
+[2021-09-16 08:31:34 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:31:34 #4 type.registry] 
+New type domain.Event
+
+[2021-09-16 08:31:34 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-16 08:31:34 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-16 08:31:34 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:33:03 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 12992@U110603
+
+[2021-09-16 08:33:04 #2 type.registry] 
+New type domain.Question
+
+[2021-09-16 08:33:04 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:33:04 #4 type.registry] 
+New type domain.Event
+
+[2021-09-16 08:33:04 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-16 08:33:04 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-16 08:33:04 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:33:27 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 5920@U110603
+
+[2021-09-16 08:33:27 #2 type.registry] 
+New type domain.Question
+
+[2021-09-16 08:33:27 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:33:27 #4 type.registry] 
+New type domain.Event
+
+[2021-09-16 08:33:27 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-16 08:33:27 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-16 08:33:27 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:34:50 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' has been recovered (tr. 1-21)
+
+[2021-09-16 08:34:50 #2 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 10392@U110603
+
+[2021-09-16 08:34:50 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:34:50 #4 type] 
+Type domain.Event is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 08:35:16 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' has been recovered (tr. 22-36)
+
+[2021-09-16 08:35:16 #2 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 8092@U110603
+
+[2021-09-16 08:35:16 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 08:35:16 #4 type] 
+Type domain.Event is not enhanced.
+
