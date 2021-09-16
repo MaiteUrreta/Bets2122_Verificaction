@@ -18,12 +18,12 @@ import dataAccess.DataAccess;
 import domain.Event;
 import domain.Question;
 import exceptions.QuestionAlreadyExist;
-import utility.TestUtilityDA;
+import utility.TestUtilityDataAccess;
 
 public class CreateQuestionDATest {
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
-	static TestUtilityDA testDA = new TestUtilityDA();
+	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
 
 	private Event ev;
 

@@ -15,14 +15,14 @@ import javax.persistence.TypedQuery;
 import configuration.ConfigXML;
 import domain.Event;
 
-public class TestUtilityDA {
+public class TestUtilityDataAccess {
 	protected  EntityManager  db;
 	protected  EntityManagerFactory emf;
 
 	ConfigXML  c=ConfigXML.getInstance();
 
 
-	public TestUtilityDA()  {		
+	public TestUtilityDataAccess()  {		
 		System.out.println("Creating TestDataAccess instance");
 
 		open();		

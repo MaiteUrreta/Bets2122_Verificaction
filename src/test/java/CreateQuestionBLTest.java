@@ -21,13 +21,13 @@ import domain.Event;
 import domain.Question;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
-import utility.TestUtilityBL;
+import utility.TestUtilityFacadeImplementation;
 
 public class CreateQuestionBLTest {
 	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));
 
 	private  BLFacadeImplementation sut= new BLFacadeImplementation(da);
-	private  TestUtilityBL testBL= new TestUtilityBL();
+	private  TestUtilityFacadeImplementation testBL= new TestUtilityFacadeImplementation();
 
 	private Event ev;
 
