@@ -1,0 +1,25 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-10 17:02:44 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021\src\main\resources\bets.temp' is opened by 14176@U110603
+
+[2021-09-10 17:02:44 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-10 17:02:44 #3 type] 
+Type domain.Event is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-10 17:03:04 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021\src\main\resources\bets.temp' has been recovered (tr. 456-467)
+
+[2021-09-10 17:03:04 #2 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021\src\main\resources\bets.temp' is opened by 3244@U110603
+
+[2021-09-10 17:03:04 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-10 17:03:04 #4 type] 
+Type domain.Event is not enhanced.
+
