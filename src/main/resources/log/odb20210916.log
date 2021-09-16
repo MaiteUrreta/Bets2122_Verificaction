@@ -446,3 +446,31 @@ Type domain.Question is not enhanced.
 [2021-09-16 12:35:33 #4 type] 
 Type domain.Event is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 12:42:55 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' has been recovered (tr. 190-204)
+
+[2021-09-16 12:42:55 #2 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 20148@U110603
+
+[2021-09-16 12:42:55 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 12:42:55 #4 type] 
+Type domain.Event is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-16 12:45:06 #1 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' has been recovered (tr. 220-234)
+
+[2021-09-16 12:45:06 #2 store] 
+Database 'C:\Users\jipurlom\ownCloud\IS2\Curso_2122\PROYECTO-PARTE1\Bets2021Parte1.1\src\main\resources\bets.temp' is opened by 22660@U110603
+
+[2021-09-16 12:45:06 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-16 12:45:06 #4 type] 
+Type domain.Event is not enhanced.
+
