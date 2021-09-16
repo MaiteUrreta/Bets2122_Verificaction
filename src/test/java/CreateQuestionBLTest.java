@@ -9,9 +9,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Vector;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import businessLogic.BLFacadeImplementation;
 import configuration.ConfigXML;
@@ -20,6 +21,7 @@ import domain.Event;
 import domain.Question;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
+import utility.TestUtilityBL;
 
 public class CreateQuestionBLTest {
 	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));

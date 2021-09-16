@@ -11,13 +11,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Vector;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Event;
 import domain.Question;
 import exceptions.QuestionAlreadyExist;
+import utility.TestUtilityDA;
 
 public class CreateQuestionDATest {
 

@@ -1,3 +1,4 @@
+package utility;
 
 
 import java.util.Date;
@@ -21,12 +22,10 @@ public class TestUtilityDA {
 	ConfigXML  c=ConfigXML.getInstance();
 
 
-	public TestUtilityDA()  {
-		
+	public TestUtilityDA()  {		
 		System.out.println("Creating TestDataAccess instance");
 
-		open();
-		
+		open();		
 	}
 
 	

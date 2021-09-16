@@ -2,11 +2,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.Test;
 
 import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;
@@ -16,8 +21,6 @@ import domain.Question;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
-import org.mockito.ArgumentCaptor;
-import org.mockito.Mockito;
 
 public class CreateQuestionBLMockTest {
 	DataAccess dataAccess = Mockito.mock(DataAccess.class);
@@ -25,7 +28,8 @@ public class CreateQuestionBLMockTest {
 
 	BLFacade sut = new BLFacadeImplementation(dataAccess);
 
-	// sut.createQuestion: The event has one question with a queryText.
+	@SuppressWarnings("unchecked")
+	@DisplayName("sut.createQuestion: The event has one question with a queryText.")
 	@Test
 	public void test1() {
 		try {
@@ -36,8 +40,7 @@ public class CreateQuestionBLMockTest {
 			try {
 				// configure Mock
 				Mockito.doReturn(oneDate).when(mockedEvent).getEventDate();
-				Mockito.when(dataAccess.createQuestion(Mockito.any(Event.class), Mockito.any(String.class),
-						Mockito.any(Integer.class))).thenThrow(QuestionAlreadyExist.class);
+				Mockito.when(dataAccess.createQuestion(Mockito.any(Event.class), Mockito.any(String.class),	Mockito.any(Integer.class))).thenThrow(QuestionAlreadyExist.class);
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
@@ -60,7 +63,7 @@ public class CreateQuestionBLMockTest {
 	}
 
 	@Test
-	// sut.createQuestion: The event has NOT a question with a queryText.
+	@DisplayName("sut.createQuestion: The event has NOT a question with a queryText.")
 	public void test2() {
 		try {
 			// define paramaters
@@ -101,7 +104,7 @@ public class CreateQuestionBLMockTest {
 	}
 
 	@Test
-	// sut.createQuestion: The event is null.
+	@DisplayName(" sut.createQuestion: The event is null.")
 	public void test3() {
 
 		try {
