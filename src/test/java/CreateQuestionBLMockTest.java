@@ -72,7 +72,7 @@ public class CreateQuestionBLMockTest {
 			String queryText = "Query Text";
 			Float betMinimum = 2f;
 			try {
-				Mockito.doReturn(null).when(dataAccess).createQuestion(Mockito.any(Event.class),
+				Mockito.doReturn(new Question(queryText, betMinimum, mockedEvent)).when(dataAccess).createQuestion(Mockito.any(Event.class),
 						Mockito.any(String.class), Mockito.any(Integer.class));
 
 				// invoke System Under Test (sut)
@@ -114,7 +114,7 @@ public class CreateQuestionBLMockTest {
 			try {
 				String queryText = "Query Text";
 				Float betMinimum = 2f;
-				Mockito.doReturn(new Question(queryText, betMinimum, mockedEvent)).when(dataAccess).createQuestion(
+				Mockito.doReturn(null).when(dataAccess).createQuestion(
 						Mockito.any(Event.class), Mockito.any(String.class), Mockito.any(Integer.class));
 
 				// invoke System Under Test (sut)
