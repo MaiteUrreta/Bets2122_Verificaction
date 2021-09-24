@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -45,17 +46,12 @@ class CreateQuestionBLMockTest {
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
 				Float betMinimum = 2f;
-				sut.createQuestion(mockedEvent, queryText, betMinimum);
+				assertThrows(QuestionAlreadyExist.class, ()-> sut.createQuestion(mockedEvent, queryText, betMinimum));
 
-				// if the program continues fail
-				fail("Mock DataAccess should be raise the exception QuestionAlreadyExist ");
 			} catch (QuestionAlreadyExist e) {
-				// if the program goes to this point OK
-				assertTrue(true);
-			} catch (EventFinished e) {
-				// if the program goes to this point fail
-				fail("Mock DataAccess should not raise the exception EventFinished ");
-			}
+				// if the program goes to this point fail, the first createQuestion of Mock
+				fail("Not possible");
+			} 
 		} catch (ParseException e) {
 			fail("It should be correct: check the date format");
 		}
@@ -89,9 +85,9 @@ class CreateQuestionBLMockTest {
 				Mockito.verify(dataAccess, Mockito.times(1)).createQuestion(eventCaptor.capture(),
 						questionStringCaptor.capture(), betMinimunCaptor.capture());
 
-				assertEquals(eventCaptor.getValue(), mockedEvent);
-				assertEquals(questionStringCaptor.getValue(), queryText);
-				assertEquals(betMinimunCaptor.getValue(), betMinimum);
+				assertEquals(mockedEvent, eventCaptor.getValue());
+				assertEquals(queryText, questionStringCaptor.getValue());
+				assertEquals(betMinimum, betMinimunCaptor.getValue());
 
 			} catch (QuestionAlreadyExist e) {
 				fail("Mock DataAccess should not raise the exception QuestionAlreadyExist");
